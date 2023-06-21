@@ -654,6 +654,22 @@ video {
   max-width: 24rem;
 }
 
+@keyframes scaleDown {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+
+  100% {
+    scale: 0.2;
+    opacity: 0;
+  }
+}
+
+.animate-makeNavSmaller {
+  animation: scaleDown 500ms ease-in-out;
+}
+
 @keyframes scaleUp {
   0% {
     scale: 0.2;
@@ -666,8 +682,8 @@ video {
   }
 }
 
-.animate-makeNavGigger {
-  animation: scaleUp 300ms ease-in-out backwards;
+.animate-makeNavBigger {
+  animation: scaleUp 500ms ease-in-out;
 }
 
 .cursor-pointer {

@@ -2,26 +2,22 @@
 // Mobile Nav
 const hamburgerMenu = document.querySelector(".hamburger");
 const menu = document.querySelector(".menu");
-const body = document.querySelector("body");
+const body = document.body;
 // eventLisrener for  Mobile Nav
-let navTimeout = () => setTimeout(removeMobileNav, 400);
+let navTimeout = () => setTimeout(toggleMobileNav, 400);
 hamburgerMenu.addEventListener("click", () => {
-  menu.classList.toggle("animate-makeNavSmaller");
+  menu.classList.toggle("animate-makeNavBigger");
 });
 hamburgerMenu.addEventListener("click", navTimeout);
 
 // Navigation function
-function removeMobileNav() {
-  hamburgerMenu.classList.toggle("open");
-  menu.classList.toggle("animate-makeNavSmaller");
+function toggleMobileNav() {
+  const isMenuOpen = hamburgerMenu.classList.contains("open");
 
+  // Toggle hamburger button and menu visibility
+  hamburgerMenu.classList.toggle("open");
   menu.classList.toggle("flex");
   menu.classList.toggle("hidden");
-  if (hamburgerMenu.classList.contains("open")) {
-    body.style.overflow = "hidden";
-  } else {
-    body.style.overflow = "scroll";
-  }
 }
 
 // testimonial carousel

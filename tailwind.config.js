@@ -22,7 +22,7 @@ module.exports = {
       },
       animation: {
         makeNavSmaller: "scaleDown 500ms ease-in-out",
-        makeNavGigger: "scaleUp 300ms ease-in-out backwards ",
+        makeNavBigger: "scaleUp 500ms ease-in-out  ",
       },
 
       colors: {
